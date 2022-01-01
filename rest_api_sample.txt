@@ -1,0 +1,100 @@
+Candidate
+===========
+
+POST localhost:7000/candidate
+{
+            "name": "devraj11",
+            "email": "devraj11@gmail.com",
+            "username": "devraj11@gmail.com",
+            "password": "devraj11@gmail.com"
+}
+
+GET localhost:7000/candidate/2
+
+PUT localhost:7000/candidate
+{
+            "id": 1,
+            "name": "devraj3",
+            "email": "devraj1@gmail.com",
+            "password": "devraj3@gmail.com",
+            "status": true
+}
+
+DELETE localhost:7000/candidate/1
+
+POST localhost:7000/candidate/apply
+{
+    "candidateId": 2,
+    "jobId": 1
+}
+
+Recruiter
+===========
+
+POST localhost:7000/recruiter
+{
+            "name": "cohesity",
+            "email": "cohesity1@gmail.com",
+            "username": "cohesity1@gmail.com",
+            "password": "cohesity@123"
+}
+
+GET localhost:7000/recruiter/1
+
+PUT
+{
+            "id": 1,
+            "name": "cohesity_m",
+            "email": "cohesity1_m@gmail.com",
+            "username": "cohesity1_m@gmail.com",
+            "password": "cohesity_m@123"
+}
+
+DELETE localhost:7000/recruiter/1
+
+Job
+====
+POST localhost:7000/job
+
+{
+            "recruiterId": 2,
+            "jobHeadline": "Need cook_delete",
+            "jobDescription": "Need cook who can cook sushi_delete",
+            "dateOfPosting": "26/11/2021"
+}
+
+GET localhost:7000/job/2
+
+PUT localhost:7000/job
+{
+            "id": 1,
+            "recruiterId": 1,
+            "jobHeadline": "Need cook_m",
+            "jobDescription": "Need cook who can cook sushi_m",
+            "dateOfPosting": "25/11/2021"
+}
+
+DELETE localhost:7000/job/1
+
+Admin
+===============
+POST localhost:8100/admin/email
+{
+            "subject": "congrats!",
+            "emailBody": "Congrats! You have been selected for next round",
+            "to": ["devrajvit@gmail.com"],
+            "from": "devrajvit@gmail.com"
+}
+
+POST localhost:8100/admin/subscribe
+{
+            "emailId": "devrajvit@gmail.com"
+}
+
+POST localhost:7000/candidate/resume
+{
+            //add file
+}
+
+GET localhost:7000/candidate/resume
+
